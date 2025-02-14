@@ -1,0 +1,373 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body y fondo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Texto en tono oscuro */
+    background-color: #fff; /* Fondo blanco */
+}
+
+/* Estilos para el header */
+header {
+    background-color: transparent; /* Sin fondo inicialmente */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 100; /* Asegura que el header quede sobre el contenido */
+}
+
+/* Estilo cuando el header tiene fondo sólido */
+header.blue {
+    background-color: #001f3f; /* Azul oscuro */
+}
+
+/* Contenedor del logo */
+.logo img {
+    height: 70px; /* Ajusta el tamaño del logo */
+    width: auto;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff; /* Blanco inicialmente */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* Cambio de color de los enlaces en el header azul */
+header.blue nav ul li a {
+    color: #fff; /* Blanco con fondo azul */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sección Hero */
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('fondo.png'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+
+/* Texto en el Hero */
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Botones en el Hero */
+.hero .btn-group {
+    margin-top: 20px;
+}
+
+.hero .btn {
+    display: inline-block;
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #005b8a;
+}
+
+/* Estadísticas */
+.stats {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.stats div {
+    text-align: center;
+    color: #fff;
+}
+
+.stats h3 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.stats p {
+    margin: 5px 0 0;
+}
+
+/* Cita */
+blockquote {
+    margin-top: 30px;
+    font-style: italic;
+    color: #ddd;
+    text-align: center;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Sección "Sobre Nosotros" */
+#asesoria-contable {
+    padding: 50px 20px;
+    background-color: #f4f4f4; /* Fondo claro */
+    text-align: center;
+}
+
+#asesoria-contable h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #001f3f; /* Azul oscuro */
+}
+
+#asesoria-contable p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #001f3f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer .social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stats div {
+        margin-bottom: 20px;
+    }
+}
+/* Sección Servicios */
+#servicios {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#servicios h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #001f3f; /* Azul oscuro */
+    text-align: center; /* Asegura que el título esté centrado */
+}
+
+.servicios-container {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas si es necesario */
+    gap: 20px; /* Espacio entre los cuadros */
+}
+
+.servicio {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio h3 {
+    font-size: 24px;
+    color: #003366;
+    margin-bottom: 10px;
+    text-align: center; /* Centra el texto del título del servicio */
+}
+
+.servicio p {
+    font-size: 16px;
+    color: #333;
+    text-align: center; /* Centra el texto descriptivo del servicio */
+}
+
+.servicio:hover {
+    transform: translateY(-10px); /* Efecto de elevación */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+/* SECCIÓN TESTIMONIOS */
+.testimonios {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.testimonios-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.testimonial {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+}
+
+.testimonial h4 {
+    margin-top: 10px;
+    color: #004080;
+}
+
+/* SECCIÓN ESTADÍSTICAS */
+.estadisticas {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 48px;
+    color: #ffc107;
+}
+
+.stat p {
+    font-size: 18px;
+}
+
+/* SECCIÓN BENEFICIOS */
+.beneficios {
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+}
+
+.beneficio-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.beneficio {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.beneficio i {
+    font-size: 40px;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.beneficio:hover {
+    transform: scale(1.05);
+    background-color: #004080;
+    color: white;
+}
+
+.beneficio h4 {
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.beneficio:hover h4 {
+    color: white;
+}

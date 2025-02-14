@@ -1,0 +1,191 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body y fondo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #001f3f; /* Azul oscuro */
+}
+
+/* Estilos para el header */
+header {
+    background-color: #002b5c;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    z-index: 100; /* Asegura que el header quede sobre el contenido */
+    top: 0;
+    left: 0;
+    right: 0;
+}
+/* Estilo cuando el header tiene la franja azul */
+header.blue {
+    background-color: #001f3f; /* Azul */
+}
+
+/* Contenedor del logo */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    height: 70px; /* Ajusta el tamaño del logo */
+    width: auto;
+}
+
+/* Cambiar color del logo cuando el header tiene la franja azul */
+header.blue .logo img {
+    filter: brightness(0) invert(1); /* Hace el logo blanco */
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;  /* Alineamos el menú a la derecha */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Cambiar color de texto en los enlaces cuando el header tiene la franja azul */
+header.blue nav ul li a {
+    color: #fff; /* Blanco cuando el header tiene la franja azul */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Secciones */
+section {
+    margin-top: 120px; /* Ajusta este valor según el tamaño de tu header */
+}
+
+/* Sección Hero */
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('fondo.jpg'); /* Cambia 'fondo.jpg' por el nombre y ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Capa de superposición con el color azul transparente y desenfoque del fondo */
+.hero .overlay {
+    background-color: rgba(0, 31, 63, 0.5); /* Azul con opacidad para efecto de transparencia */
+    backdrop-filter: blur(10px); /* Borroso el fondo */
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Estilos del texto en el overlay */
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+.servicios {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.servicios h2 {
+    color: #002b5c;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.contenedor-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    color: #002b5c;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.tarjeta p {
+    font-size: 16px;
+    color: #555;
+}
+
+.btn-servicios {
+    display: inline-block;
+    background-color: #002b5c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 30px;
+    transition: background 0.3s;
+}
+
+.btn-servicios:hover {
+    background-color: #004080;
+}
+
+
+/* Estilos del footer */
+footer {
+    background-color: #002244;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
