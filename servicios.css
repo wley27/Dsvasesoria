@@ -12,6 +12,7 @@ body {
     padding: 0;
     color: #fff;
     background-color: #001f3f; /* Azul oscuro */
+    overflow-x: hidden; /* Evitar desplazamiento horizontal no deseado */
 }
 
 /* Estilos para el header */
@@ -24,14 +25,17 @@ header {
     justify-content: space-between;
     width: 100%;
     position: fixed;
-    z-index: 100; /* Asegura que el header quede sobre el contenido */
+    z-index: 100;
     top: 0;
     left: 0;
     right: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    background-color: rgba(0, 43, 92, 0.9); /* Fondo semitransparente */
 }
+
 /* Estilo cuando el header tiene la franja azul */
 header.blue {
-    background-color: #001f3f; /* Azul */
+    background-color: #001f3f;
 }
 
 /* Contenedor del logo */
@@ -42,13 +46,13 @@ header.blue {
 }
 
 .logo img {
-    height: 70px; /* Ajusta el tamaño del logo */
+    height: 70px;
     width: auto;
 }
 
 /* Cambiar color del logo cuando el header tiene la franja azul */
 header.blue .logo img {
-    filter: brightness(0) invert(1); /* Hace el logo blanco */
+    filter: brightness(0) invert(1);
 }
 
 /* Estilos para la barra de navegación */
@@ -57,7 +61,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end;  /* Alineamos el menú a la derecha */
+    justify-content: flex-end;
 }
 
 nav ul li {
@@ -70,9 +74,8 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Cambiar color de texto en los enlaces cuando el header tiene la franja azul */
 header.blue nav ul li a {
-    color: #fff; /* Blanco cuando el header tiene la franja azul */
+    color: #fff;
 }
 
 nav ul li a:hover {
@@ -81,32 +84,32 @@ nav ul li a:hover {
 
 /* Secciones */
 section {
-    margin-top: 120px; /* Ajusta este valor según el tamaño de tu header */
+    margin-top: 120px;
 }
 
 /* Sección Hero */
 .hero {
     position: relative;
     height: 100vh;
-    background-image: url('fondo.jpg'); /* Cambia 'fondo.jpg' por el nombre y ruta de tu imagen */
+    background-image: url('fondo.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 0;
 }
 
-/* Capa de superposición con el color azul transparente y desenfoque del fondo */
 .hero .overlay {
-    background-color: rgba(0, 31, 63, 0.5); /* Azul con opacidad para efecto de transparencia */
-    backdrop-filter: blur(10px); /* Borroso el fondo */
+    background-color: rgba(0, 31, 63, 0.5);
+    backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 8px;
     display: inline-block;
+    z-index: 1; /* Asegura que el texto esté encima del fondo */
 }
 
-/* Estilos del texto en el overlay */
 .hero h2 {
     font-size: 48px;
     margin-bottom: 10px;
@@ -116,6 +119,7 @@ section {
     font-size: 24px;
 }
 
+/* Sección de servicios */
 .servicios {
     text-align: center;
     padding: 50px 20px;
@@ -143,6 +147,9 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .tarjeta:hover {
@@ -180,7 +187,6 @@ section {
     background-color: #004080;
 }
 
-
 /* Estilos del footer */
 footer {
     background-color: #002244;
@@ -188,4 +194,86 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 50px;
+    z-index: 0; /* Asegura que no quede encima del contenido */
+}
+
+/* Media Queries para dispositivos móviles y pantallas pequeñas */
+
+/* Dispositivos de hasta 768px (tabletas y pantallas más pequeñas) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .servicios h2 {
+        font-size: 24px;
+    }
+
+    .contenedor-servicios {
+        gap: 15px;
+    }
+
+    .tarjeta {
+        width: 250px;
+    }
+
+    .btn-servicios {
+        padding: 10px 18px;
+    }
+}
+
+/* Dispositivos de hasta 480px (móviles pequeños) */
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .servicios h2 {
+        font-size: 22px;
+    }
+
+    .contenedor-servicios {
+        gap: 10px;
+    }
+
+    .tarjeta {
+        width: 220px;
+    }
+
+    .btn-servicios {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 10px;
+    }
 }
