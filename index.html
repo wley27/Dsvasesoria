@@ -2,22 +2,28 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Asesoría Contable</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!-- Header con menú responsivo -->
     <header>
         <div class="logo">
             <img src="logo.png" alt="Logo de Asesoría Contable">
         </div>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Sobre Nosotros</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="contacto.html">Contáctenos</a></li>
             </ul>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
 
@@ -33,121 +39,37 @@
         </div>
     </section>
 
+    <!-- Sección de Servicios -->
     <section id="servicios">
         <h2>Nuestros Servicios</h2>
         <div class="servicios-container">
-            <!-- Contabilidad General -->
-            <div class="servicio">
-                <h3>Contabilidad General</h3>
-                <p>Gestión y organización de tus finanzas personales y empresariales.</p>
-            </div>
-    
-            <!-- Asesorías Contables Personalizadas -->
-            <div class="servicio">
-                <h3>Asesorías Contables Personalizadas</h3>
-                <p>Soluciones adaptadas a las necesidades específicas de tu negocio.</p>
-            </div>
-    
-            <!-- Servicios Tributarios -->
-            <div class="servicio">
-                <h3>Servicios Tributarios</h3>
-                <p>Declaración y cumplimiento de obligaciones fiscales mensuales, semestrales y anuales.</p>
-            </div>
-    
-            <!-- Asesoramiento en Planificación Tributaria -->
-            <div class="servicio">
-                <h3>Asesoramiento en Planificación Tributaria</h3>
-                <p>Optimización de recursos a través de estrategias fiscales personalizadas.</p>
-            </div>
+            <div class="servicio"><h3>Contabilidad General</h3><p>Gestión y organización de tus finanzas.</p></div>
+            <div class="servicio"><h3>Asesorías Contables</h3><p>Soluciones adaptadas a tu negocio.</p></div>
+            <div class="servicio"><h3>Servicios Tributarios</h3><p>Declaraciones fiscales mensuales y anuales.</p></div>
+            <div class="servicio"><h3>Planificación Tributaria</h3><p>Optimización de recursos fiscales.</p></div>
         </div>
     </section>
-    <body>
+    <!-- Sección de Estadísticas -->
+    <section class="estadisticas">
+        <div class="stat"><h3 class="counter" data-target="150">0</h3><p>Clientes Satisfechos</p></div>
+        <div class="stat"><h3 class="counter" data-target="10">0</h3><p>Años de Experiencia</p></div>
+        <div class="stat"><h3 class="counter" data-target="99">0</h3><p>% de Éxito en Declaraciones</p></div>
+    </section>
+    <!-- Sección de Testimonios -->
+    <section class="testimonios">
+        <h2>Testimonios de Clientes</h2>
+        <div class="testimonios-container">
+            <div class="testimonial"><p>"Me ayudaron a organizar mis finanzas."</p><h4>María López</h4></div>
+            <div class="testimonial"><p>"Profesionales y confiables."</p><h4>Juan Pérez</h4></div>
+            <div class="testimonial"><p>"Optimicé mis recursos con su ayuda."</p><h4>Andrea Gómez</h4></div>
+        </div>
+    </section>
 
-        <!-- Otras secciones como el banner principal -->
-        
-        <!-- 🔹 SECCIÓN DE TESTIMONIOS (Después del banner principal) -->
-        <section class="testimonios">
-            <h2>Testimonios de Clientes</h2>
-            <div class="testimonios-container">
-                <div class="testimonial">
-                    <p>"Excelente servicio, me ayudaron a organizar mis finanzas de manera eficiente."</p>
-                    <h4>María López</h4>
-                </div>
-                <div class="testimonial">
-                    <p>"Profesionales y confiables, recomiendo totalmente sus servicios contables."</p>
-                    <h4>Juan Pérez</h4>
-                </div>
-                <div class="testimonial">
-                    <p>"Gracias a su asesoría, optimicé mis recursos y cumplí con todas mis obligaciones fiscales."</p>
-                    <h4>Andrea Gómez</h4>
-                </div>
-            </div>
-        </section>
-    
-        <!-- 🔹 SECCIÓN DE ESTADÍSTICAS (Después de testimonios) -->
-        <section class="estadisticas">
-            <div class="stat">
-                <h3 class="counter" data-target="150">0</h3>
-                <p>Clientes Satisfechos</p>
-            </div>
-            <div class="stat">
-                <h3 class="counter" data-target="10">0</h3>
-                <p>Años de Experiencia</p>
-            </div>
-            <div class="stat">
-                <h3 class="counter" data-target="99">0</h3>
-                <p>% de Éxito en Declaraciones</p>
-            </div>
-        </section>
-    
-        <!-- 🔹 SECCIÓN DE BENEFICIOS (Antes del pie de página) -->
-        <section class="beneficios">
-            <h2>¿Por qué Elegirnos?</h2>
-            <div class="beneficio-container">
-                <div class="beneficio">
-                    <i class="fas fa-user-check"></i>
-                    <h4>Atención Personalizada</h4>
-                    <p>Brindamos asesoría contable adaptada a las necesidades de cada cliente.</p>
-                </div>
-                <div class="beneficio">
-                    <i class="fas fa-chart-line"></i>
-                    <h4>Optimización Financiera</h4>
-                    <p>Te ayudamos a mejorar tu rentabilidad y tomar mejores decisiones.</p>
-                </div>
-                <div class="beneficio">
-                    <i class="fas fa-shield-alt"></i>
-                    <h4>Seguridad y Confianza</h4>
-                    <p>Manejamos tu información con total confidencialidad y profesionalismo.</p>
-                </div>
-            </div>
-        </section>
-        <!-- 🔹 SCRIPT PARA ANIMACIÓN DE CONTADORES -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const counters = document.querySelectorAll('.counter');
-                counters.forEach(counter => {
-                    counter.innerText = '0';
-                    const updateCounter = () => {
-                        const target = +counter.getAttribute('data-target');
-                        const count = +counter.innerText;
-                        const increment = target / 100;
-                        if (count < target) {
-                            counter.innerText = `${Math.ceil(count + increment)}`;
-                            setTimeout(updateCounter, 40);
-                        } else {
-                            counter.innerText = target;
-                        }
-                    };
-                    updateCounter();
-                });
-            });
-        </script>
-    
-    </body>
 
-    <!-- Footer -->
+
+    <!-- Footer fijo en la parte inferior -->
     <footer>
-        <p>&copy; 2024 Dsvasesoria Contable Todos los derechos reservados.</p>
+        <p>&copy; 2024 Dsvasesoria Contable. Todos los derechos reservados.</p>
         <div class="social-links">
             <a href="https://facebook.com" target="_blank">Facebook</a>
             <a href="https://instagram.com" target="_blank">Instagram</a>
@@ -155,16 +77,47 @@
         </div>
     </footer>
 
+    <!-- JavaScript para Menú Responsive -->
     <script>
-        window.onscroll = function() {
-            var header = document.querySelector('header');
-            if (window.scrollY > 50) {  // Cambia 50 por el valor de desplazamiento deseado
-                header.style.backgroundColor = "#003366";  // Franja de color azul
-            } else {
-                header.style.backgroundColor = "transparent";  // Sin color al principio
-            }
-        };
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuIcon = document.querySelector(".menu-icon");
+            const navLinks = document.querySelector(".nav-links");
+            menuIcon.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+            });
 
+            // Animación de estadísticas
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                counter.innerText = '0';
+                const updateCounter = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const increment = target / 100;
+                    if (count < target) {
+                        counter.innerText = `${Math.ceil(count + increment)}`;
+                        setTimeout(updateCounter, 40);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCounter();
+            });
+        });
     </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let header = document.querySelector("header");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 50) {
+                header.classList.add("blue");
+            } else {
+                header.classList.remove("blue");
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
