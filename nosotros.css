@@ -8,13 +8,10 @@
 /* Asegurar que HTML y BODY ocupen toda la altura de la pantalla */
 html, body {
     height: 100%;
-    margin: 0;
-    padding: 0;
-
     display: flex;
     flex-direction: column;
     font-family: 'Arial', sans-serif;
-    color: #333; /* Texto en tono oscuro */
+    color: #333;
     background-color: #f5f5f5;
 }
 
@@ -22,59 +19,73 @@ html, body {
 header {
     background-color: #002b5c;
     color: white;
-    padding: 20px;
+    padding: 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     position: fixed;
-    z-index: 100; /* Asegura que el header quede sobre el contenido */
     top: 0;
     left: 0;
     right: 0;
+    z-index: 100;
 }
 
+/* Logo */
 .logo img {
-    height: 70px;
+    height: 60px;
     width: auto;
 }
 
 /* NAVBAR */
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+nav {
     display: flex;
 }
-nav ul li {
-    margin-left: 20px;
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
+
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
 }
+
 nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* CONTENIDO PRINCIPAL */
-main {
-    flex-grow: 1; /* Empuja el footer hacia abajo */
-    display: flex;
-    flex-direction: column;
-    padding-top: 100px; /* Ajusta este valor según la altura del header */
+/* MENÚ RESPONSIVE */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
+/* CONTENIDO PRINCIPAL */
+main {
+    flex-grow: 1;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sección Sobre Nosotros */
 .sobre-nosotros {
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 20px;
     background-color: #f8f9fa;
 }
 
 .sobre-nosotros h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #002b5c;
     margin-bottom: 20px;
 }
@@ -87,19 +98,21 @@ main {
     line-height: 1.6;
 }
 
-/* Contenedor principal */
+/* Contenedor Principal */
 .contenedor-info {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 30px;
 }
 
-/* Misión y visión */
+/* Misión y Visión */
 .mision-vision {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .card {
@@ -124,7 +137,8 @@ main {
 
 /* Imagen de equipo */
 .equipo-trabajo img {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -150,7 +164,7 @@ main {
     background-color: #004080;
 }
 
-/* FOOTER FIJO ABAJO */
+/* FOOTER */
 footer {
     background-color: #002b5c;
     color: white;
@@ -168,7 +182,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Sección de Valores Corporativos */
+/* Sección de Valores */
 .valores {
     text-align: center;
     padding: 50px 20px;
@@ -177,9 +191,9 @@ footer a:hover {
 
 .valores-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
+    gap: 20px;
 }
 
 .valor {
@@ -187,7 +201,8 @@ footer a:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     text-align: center;
 }
 
@@ -200,7 +215,7 @@ footer a:hover {
     color: #002b5c;
 }
 
-/* Contenedor general */
+/* Testimonios */
 .casos-exito {
     text-align: center;
     padding: 50px 20px;
@@ -208,9 +223,9 @@ footer a:hover {
     position: relative;
 }
 
-/* Contenedor del slider */
 .testimonios-container {
-    width: 60%;
+    width: 90%;
+    max-width: 600px;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -218,33 +233,20 @@ footer a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background: white;
     padding: 20px;
-    min-height: 180px;
-}
-
-/* Tarjetas de testimonios */
-.testimonios-slider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
 }
 
 .testimonio {
-    position: absolute;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    font-size: 1.3rem;
+    display: none;
+    font-size: 1.2rem;
     color: #444;
     font-style: italic;
     padding: 20px;
 }
 
 .testimonio.active {
-    opacity: 1;
+    display: block;
 }
 
-/* Nombre del cliente */
 .testimonio span {
     display: block;
     font-weight: bold;
@@ -274,3 +276,42 @@ footer a:hover {
 
 .prev { left: 10px; }
 .next { right: 10px; }
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    /* Menú responsive */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #002b5c;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Mostrar menú cuando esté activo */
+    nav ul.active {
+        display: flex;
+    }
+
+    /* Ajustes de diseño */
+    .contenedor-info {
+        flex-direction: column;
+    }
+
+    .mision-vision {
+        flex-direction: column;
+        align-items: center;
+    }
+}
