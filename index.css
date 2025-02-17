@@ -10,13 +10,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333; /* Texto en tono oscuro */
-    background-color: #fff; /* Fondo blanco */
+    color: #333;
+    background-color: #fff;
 }
 
 /* Estilos para el header */
 header {
-    background-color: transparent; /* Sin fondo inicialmente */
+    background-color: transparent;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -25,25 +25,22 @@ header {
     top: 0;
     width: 100%;
     transition: background-color 0.3s ease-in-out;
-    z-index: 100; /* Asegura que el header quede sobre el contenido */
+    z-index: 100;
 }
 
-/* Estilo cuando el header tiene fondo sólido */
 header.blue {
-    background-color: #001f3f; /* Azul oscuro */
+    background-color: #001f3f;
 }
 
-/* Contenedor del logo */
+/* Logo */
 .logo img {
-    height: 70px; /* Ajusta el tamaño del logo */
+    height: 70px;
     width: auto;
 }
 
 /* Navegación */
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
 }
 
@@ -52,15 +49,10 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff; /* Blanco inicialmente */
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
-}
-
-/* Cambio de color de los enlaces en el header azul */
-header.blue nav ul li a {
-    color: #fff; /* Blanco con fondo azul */
 }
 
 nav ul li a:hover {
@@ -71,7 +63,7 @@ nav ul li a:hover {
 .hero {
     position: relative;
     height: 100vh;
-    background-image: url('fondo.png'); /* Imagen de fondo */
+    background-image: url('fondo.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -82,8 +74,6 @@ nav ul li a:hover {
     color: #fff;
 }
 
-
-/* Texto en el Hero */
 .hero h2 {
     font-size: 48px;
     margin-bottom: 20px;
@@ -115,118 +105,6 @@ nav ul li a:hover {
     background-color: #005b8a;
 }
 
-/* Estadísticas */
-.stats {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.stats div {
-    text-align: center;
-    color: #fff;
-}
-
-.stats h3 {
-    font-size: 36px;
-    margin: 0;
-}
-
-.stats p {
-    margin: 5px 0 0;
-}
-
-/* Cita */
-blockquote {
-    margin-top: 30px;
-    font-style: italic;
-    color: #ddd;
-    text-align: center;
-}
-
-blockquote cite {
-    display: block;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #ccc;
-}
-
-/* Sección "Sobre Nosotros" */
-#asesoria-contable {
-    padding: 50px 20px;
-    background-color: #f4f4f4; /* Fondo claro */
-    text-align: center;
-}
-
-#asesoria-contable h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #001f3f; /* Azul oscuro */
-}
-
-#asesoria-contable p {
-    font-size: 18px;
-    color: #333;
-}
-
-/* Footer */
-footer {
-    background-color: #001f3f;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer .social-links a {
-    margin: 0 10px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-footer .social-links a:hover {
-    text-decoration: underline;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hero h2 {
-        font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    .stats {
-        flex-direction: column;
-    }
-
-    .stats div {
-        margin-bottom: 20px;
-    }
-}
 /* Sección Servicios */
 #servicios {
     padding: 50px 20px;
@@ -237,16 +115,14 @@ footer .social-links a:hover {
 #servicios h2 {
     font-size: 36px;
     margin-bottom: 30px;
-    color: #001f3f; /* Azul oscuro */
-    text-align: center; /* Asegura que el título esté centrado */
+    color: #001f3f;
 }
 
 .servicios-container {
     display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas si es necesario */
-    gap: 20px; /* Espacio entre los cuadros */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .servicio {
@@ -255,7 +131,7 @@ footer .social-links a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    text-align: left;
+    text-align: center;
     width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -264,20 +140,14 @@ footer .social-links a:hover {
     font-size: 24px;
     color: #003366;
     margin-bottom: 10px;
-    text-align: center; /* Centra el texto del título del servicio */
-}
-
-.servicio p {
-    font-size: 16px;
-    color: #333;
-    text-align: center; /* Centra el texto descriptivo del servicio */
 }
 
 .servicio:hover {
-    transform: translateY(-10px); /* Efecto de elevación */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
-/* SECCIÓN TESTIMONIOS */
+
+/* Sección Testimonios */
 .testimonios {
     text-align: center;
     padding: 50px;
@@ -288,7 +158,7 @@ footer .social-links a:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
-    overflow: hidden;
+    flex-wrap: wrap;
 }
 
 .testimonial {
@@ -309,11 +179,12 @@ footer .social-links a:hover {
     color: #004080;
 }
 
-/* SECCIÓN ESTADÍSTICAS */
+/* Sección Estadísticas */
 .estadisticas {
     display: flex;
     justify-content: center;
     gap: 50px;
+    flex-wrap: wrap;
     padding: 50px;
     background-color: #001f3f;
     color: white;
@@ -329,7 +200,7 @@ footer .social-links a:hover {
     font-size: 18px;
 }
 
-/* SECCIÓN BENEFICIOS */
+/* Sección Beneficios */
 .beneficios {
     text-align: center;
     padding: 50px;
@@ -339,6 +210,7 @@ footer .social-links a:hover {
 .beneficio-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -370,4 +242,66 @@ footer .social-links a:hover {
 
 .beneficio:hover h4 {
     color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #001f3f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer .social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .servicios-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonios-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .estadisticas {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .beneficio-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
